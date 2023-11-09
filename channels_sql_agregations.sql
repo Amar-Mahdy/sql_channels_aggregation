@@ -62,7 +62,7 @@ WITH fb_ig_2023 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2023_fb_insta`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -126,7 +126,7 @@ fb_ig_2022 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2022_fb_insta`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -190,7 +190,7 @@ fb_ig_2021 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2021_fb_insta`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -247,7 +247,7 @@ li_2023 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2023_li`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -304,7 +304,7 @@ li_2022 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2022_li`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -361,7 +361,7 @@ li_2021 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2021_LI`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -418,7 +418,7 @@ reddit_2023 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2023_reddit`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -476,7 +476,7 @@ reddit_2022 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2022_reddit`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -540,7 +540,7 @@ go_2023 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2023_go`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -604,7 +604,7 @@ go_2022 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2022_go`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -668,7 +668,7 @@ go_2021 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2021_GO`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -732,7 +732,7 @@ adobe_2023 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2023_adobe`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -794,7 +794,7 @@ adobe_2022 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2022_adobe`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -853,7 +853,7 @@ adobe_2021 AS
     NULL AS Target_Budget,
     NULL AS Target_Reach,
     NULL AS Target_Frequency
-    FROM `merkle-asml.asml_channels.2021_adobe`
+    FROM `project.dataset.table`
     GROUP BY Date, Channel, Continent, Job_Category
 ),
 
@@ -912,12 +912,12 @@ target_sheet AS
         SUM(Frequency) AS Target_Frequency,
         
 
-      FROM `merkle-asml.asml_channels_eu.target_sheet`
+      FROM `project.dataset.table`
         GROUP BY Date, Channel, Continent, Job_Category, Period, Target_Job_Category
 )
 
 
-#UNION ALL the datasets and set continent to US so EU is filtered out
+#UNION ALL the datasets 
 
 
 
